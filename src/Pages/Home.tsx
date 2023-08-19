@@ -2,16 +2,19 @@ import React, { ReactElement } from 'react'
 import oval from "../assets/Oval.svg"
 import Tab from "../Components/tab"
 import HeaderIcon from "../assets/header-icon.svg"
-import Comment from '../Components/Comment'
+import Feedback from '../Components/Feedback'
+import NoComment from '../Components/NoComment'
 interface Props {
     
 }
+const table = []
+  
 
 function Home({}: Props): ReactElement {
     return (
-        <div className='bg-[#F7F8FD] pt-8'>
+        <div className='bg-[#F7F8FD] h-[100%] pt-8'>
            
-            <div className=' grid md:grid-cols-4 md:w-[80%] mx-auto  '>
+            <div className=' grid md:grid-cols-4 h-screen md:w-[80%] mx-auto  '>
                 <div className='hidden md:block'>
                     
                        <div className='h-[200px] relative rounded-xl bg-center bg-cover pt-[30%] pl-[10%]' style = {{ backgroundImage : `url(${oval})`}}>
@@ -132,10 +135,22 @@ function Home({}: Props): ReactElement {
                       </button>
                         
                     </header>
-                    <Comment/>
-                    <Comment/>
-                    <Comment/>
-                    <Comment/>
+                    {
+                      table.length === 0 ?
+                     
+                       <>
+                        <NoComment/>
+                       </>: 
+                       <>
+                       <Feedback/>
+                        <Feedback/>
+                        <Feedback/>
+                        <Feedback/>
+                      </>
+                     
+                  
+                    }
+                   
                   
                     
 
