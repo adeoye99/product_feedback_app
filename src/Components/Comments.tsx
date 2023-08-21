@@ -1,13 +1,14 @@
 import React, { ReactElement } from 'react'
 import user1 from "../assets/user-images/image-anne.jpg"
 
+
 interface Props {
     
 }
 
 function Comments({}: Props): ReactElement {
     return (
-        <div className='grid grid-cols-6  border-b pt-4'>
+        <div className='grid md:grid-cols-6   pt-4'>
             <div className='flex justify-center'>
                <img src = {user1} className='rounded-[50%] w-[50px] h-[50px]'/>
             </div>
