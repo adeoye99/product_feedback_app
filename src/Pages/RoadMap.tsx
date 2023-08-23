@@ -4,18 +4,21 @@ import jsonData from "../data.json"
 import planned from '../Constants/RoadMapdata'
 import Live from '../Constants/Live'
 import inProgress from '../Constants/InProgress'
+import { useNavigate } from 'react-router-dom'
 
 interface Props {
     
 }
 
 function RoadMap({}: Props): ReactElement {
+
+    const navigate = useNavigate()
     console.log(jsonData)
     return (
         <div className='pt-6 bg-[#F7F8FD]'>
               <header className='bg-[#373F68] w-[80%] mx-auto h-[80px] flex items-center rounded-lg gap-x-6 text-white px-5 relative'>
                 <div className='flex flex-col items-center  text-white  font-bold'>
-                    <div className='flex items-center  gap-2 text-white  font-bold'>
+                    <div onClick = { () => navigate(-1) } className='flex items-center  gap-2 text-white  font-bold'>
                          <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
                                  <path d="M4.33447 9L0.334473 5L4.33447 1" stroke="#CDD2EE" strokeWidth="2"/>
                           </svg>
@@ -76,12 +79,9 @@ function RoadMap({}: Props): ReactElement {
                                            amountOfComment = {item?.noOfComment}
                                            upVotes = {item?.upvotes}
                                            status = {item?.status}
-                                  
                                         />
 
                                     )
-                                    
-
                                   })
                                 }
                                
@@ -109,9 +109,6 @@ function RoadMap({}: Props): ReactElement {
                                         )
                                     })
                                 }
-                                {/* <Roadmapcomp
-                                  bordertopColor =  "border-t-[#62BCFA]"
-                                /> */}
                                
                             </div>
                             

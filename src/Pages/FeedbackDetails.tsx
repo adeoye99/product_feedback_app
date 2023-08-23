@@ -3,6 +3,7 @@ import Feedback from '../Components/Feedback'
 import Comments from '../Components/Comments'
 import AddComment from '../Components/AddComment'
 import Gobackbutton from '../Components/Gobackbutton'
+import { Link } from 'react-router-dom'
 interface Props {
     
 }
@@ -17,7 +18,9 @@ function FeedbackDetails({}: Props): ReactElement {
                />
                 <div className='text-right'>
                    <button className='bg-[#4661E6] text-white p-3 font-semibold rounded-lg md:w-[50%]'>
+                    <Link to ="/editfeedback">
                      Edit Button
+                     </Link>
                    </button>
                 </div>
                 

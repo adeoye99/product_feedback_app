@@ -8,7 +8,7 @@ interface Props {
 
 function NoComment({}: Props): ReactElement {
     return (
-        <div className='w-[100%] bg-white py-7 p-5 md:p-0  mt-[5%] md:h-[70%] rounded-lg flex justify-center '>
+        <div className='w-[100%] bg-white py-7 p-5 md:p-0  mt-[1%] md:h-[80%] rounded-lg flex justify-center '>
             <div className='flex flex-col justify-center items-center'>
                  <img className='w-[160px] h-50' src = {NoCommentIcon }/>
                  <p>There is no feedback yet.</p>

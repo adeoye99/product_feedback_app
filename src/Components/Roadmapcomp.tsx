@@ -17,11 +17,11 @@ function Roadmapcomp({ bordertopColor , status , title , description , category 
                 <div className='grid md:grid-cols-2 '>
                      <div className='flex items-center gap-2 text-[#647196] text-sm'>
                         { 
-                           status === "planned" ?
+                           status === "Planned" ?
                            <svg className='border' xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
                                  <circle cx="4" cy="4" r="4" fill="#F49F85"/>
                              </svg>:
-                             status === "in-progress" ?
+                             status === "In Progress" ?
                                 <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
                                     <circle cx="4" cy="4" r="4" fill="#AD1FEA"/>
                                 </svg>:

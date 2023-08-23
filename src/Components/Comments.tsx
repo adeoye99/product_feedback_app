@@ -8,7 +8,7 @@ interface Props {
 
 function Comments({}: Props): ReactElement {
     return (
-        <div className='grid md:grid-cols-6   pt-4'>
+        <div className='grid md:grid-cols-6 pt-4'>
             <div className='flex justify-center'>
                <img src = {user1} className='rounded-[50%] w-[50px] h-[50px]'/>
             </div>
@@ -17,7 +17,6 @@ function Comments({}: Props): ReactElement {
                  <div>
                    <p className='text-[#3A4374] font-bold text-[14px]'> Elijah Moss</p>
                    <p className='text-[#647196] text-[14px]'> @hexagon.bestagon</p>
-
                  </div>
 
                  <p className='text-[#4661E6] text-[13px] text-right'>Reply</p>
