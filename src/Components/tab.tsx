@@ -7,7 +7,7 @@ interface Props {
 
 function Tab({ tag }: Props): ReactElement {
     return (
-        <div className='rounded-xl text-sm font-semibold text-[#4661E6] bg-[#F2F4FF] px-4 w-auto text-center hover:bg-[#4661E6]'>
+        <div className='rounded-lg text-sm font-semibold text-[#4661E6] bg-[#F2F4FF] px-4 w-auto text-center hover:bg-[#4661E6]'>
             {tag}
         </div>
     )

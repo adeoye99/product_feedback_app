@@ -4,6 +4,8 @@ import Tab from "../Components/tab"
 import HeaderIcon from "../assets/header-icon.svg"
 import Feedback from '../Components/Feedback'
 import NoComment from '../Components/NoComment'
+import { Link } from 'react-router-dom'
+import AddFeedBackButton from '../Components/AddFeedBackButton'
 interface Props {
     
 }
@@ -12,19 +14,19 @@ const table = []
 
 function Home({}: Props): ReactElement {
     return (
-        <div className='bg-[#F7F8FD] h-[100%] pt-8'>
+        <div className='bg-[#F7F8FD]  pt-8'>
            
-            <div className=' grid md:grid-cols-4 h-screen md:w-[80%] mx-auto  '>
-                <div className='hidden md:block'>
+            <div className=' grid  lg:grid-cols-4 h-screen md:w-[80%] mx-auto  '>
+                <div className='hidden flex-row gap-3 md:block md:flex lg:flex-col'>
                     
-                       <div className='h-[200px] relative rounded-xl bg-center bg-cover pt-[30%] pl-[10%]' style = {{ backgroundImage : `url(${oval})`}}>
+                       <div className='h-[200px] w-[100%] relative rounded-xl bg-center bg-cover pt-[10%] lg:pt-[30%] pl-[1%] lg:pl-[10%]' style = {{ backgroundImage : `url(${oval})`}}>
                          <div className=' text-white'>
                             <p className='text-xl'>Frontend Mentor</p>
                             <p className='text-sm'>Feedback Board</p>
                           </div>
                         
                        </div>
-                       <div className='bg-white mt-6 h-[200px] relative rounded-sm py-6 px-3'>
+                       <div className='bg-white lg:mt-6 h-[200px] w-[100%] relative rounded-sm py-6 px-3'>
                          <div className='flex flex-col gap-y-4 '>
                             <div className='flex gap-4'>
                               <Tab
@@ -56,7 +58,7 @@ function Home({}: Props): ReactElement {
                           </div>
                         
                        </div>
-                       <div className='bg-white mt-6 h-[200px] relative rounded-sm py-6 px-3'>
+                       <div className='bg-white w-[100%] lg:mt-6 h-[200px] relative rounded-sm py-6 px-3'>
                          <div className='w-[80%] mx-auto grid grid-cols-1 gap-y-4'>
                            
                            <div className='grid grid-cols-2'>
@@ -94,7 +96,6 @@ function Home({}: Props): ReactElement {
                              </svg>
                              Live
                             </div>
-                            
                              <p className='text-right font-semibold'>
                                   1
                              </p>
@@ -106,7 +107,7 @@ function Home({}: Props): ReactElement {
 
 
                 </div>
-                <div className='col-span-3 px-4 '>
+                <div className='col-span-3 px-4 lg:mt-[20px]'>
                     <header className='bg-[#373F68] h-[80px] flex items-center rounded-lg gap-x-6 text-white px-5 relative'>
                     <svg className='hidden md:block' xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
                          <g clip-path="url(#clip0_12_3)">
@@ -130,23 +131,30 @@ function Home({}: Props): ReactElement {
                         </svg>
 
                       </div>
-                      <button className='bg-[#AD1FEA] p-3 font-semibold rounded-lg absolute right-2'>
-                        Add Feedback  +
-                      </button>
+                     <div className='absolute right-2'>
+                        {/* <button className='bg-[#AD1FEA] p-3 font-semibold rounded-lg '>
+                         <Link to="/newfeedback">
+                          Add Feedback  +
+                          </Link>
+                        </button> */}
+                        <AddFeedBackButton/>
+                      </div>
+                   
                         
                     </header>
                     {
                       table.length === 0 ?
-                     
                        <>
                         <NoComment/>
                        </>: 
                        <>
-                       <Feedback/>
-                        <Feedback/>
-                        <Feedback/>
-                        <Feedback/>
-                      </>
+                          <Feedback
+                          
+                          />
+                          <Feedback/>
+                          <Feedback/>
+                          <Feedback/>
+                       </>
                      
                   
                     }

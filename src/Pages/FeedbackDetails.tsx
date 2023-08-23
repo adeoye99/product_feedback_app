@@ -2,21 +2,19 @@ import React, { ReactElement } from 'react'
 import Feedback from '../Components/Feedback'
 import Comments from '../Components/Comments'
 import AddComment from '../Components/AddComment'
+import Gobackbutton from '../Components/Gobackbutton'
 interface Props {
     
 }
 
 function FeedbackDetails({}: Props): ReactElement {
     return (
-        <div className='bg-[#F7F8FD] h-[100%] pt-8 pb-[10%]'>
+        <div className='bg-[#F7F8FD] pt-8 pb-[10%]'>
           <div className='w-[90%] md:w-[40%] mx-auto '>
             <div className='grid grid-cols-2'>
-                <div className='flex items-center  gap-4'>
-                   <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
-                      <path d="M4.33447 9L0.334473 5L4.33447 1" stroke="#4661E6" stroke-width="2"/>
-                   </svg>
-                     Go back 
-                </div>
+               <Gobackbutton
+                 name = "Go Back"
+               />
                 <div className='text-right'>
                    <button className='bg-[#4661E6] text-white p-3 font-semibold rounded-lg md:w-[50%]'>
                      Edit Button
@@ -30,7 +28,7 @@ function FeedbackDetails({}: Props): ReactElement {
             <p className='font-bold'>4 Comments</p>
             <Comments/>
             <hr className=' mx-auto'/>
-            <div className='w-[90%] border-l ml-auto mt-[10%]'>
+            <div className='w-[90%] md:border-l ml-auto mt-[10%]'>
               <Comments/> 
               <Comments/> 
               

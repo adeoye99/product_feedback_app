@@ -14,16 +14,16 @@ function Feedback({}: Props): ReactElement {
                         <svg xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 11 7" fill="none">
                              <path d="M1.33447 6L5.33447 2L9.33447 6" stroke="#4661E6" stroke-width="2"/>
                          </svg>
-                       112
+                        112
                     </div>
 
                 </div>
                 <div className='col-span-6'>
                     <p className='font-semibold text-black'>Add tags for solutions</p>
                     <p className='text-[#647196] mt-2'>Easier to search for solutions based on a specific stack.</p>
-                   <div className='rounded-xl text-sm w-[30%] h-[30px] flex justify-center items-center font-semibold text-[#4661E6] bg-[#F2F4FF] px-4 text-center mt-3'>
+                     <div className='rounded-xl text-sm w-[30%] h-[30px] flex justify-center items-center font-semibold text-[#4661E6] bg-[#F2F4FF] px-4 text-center mt-3'>
                        Enhancement
-                    </div>
+                     </div>
                 </div>
                 <div className=' hidden md:block my-auto gap-x-2'>
                     <div className='flex flex-row justify-center items-center gap-x-2'>
@@ -35,8 +35,8 @@ function Feedback({}: Props): ReactElement {
                 </div> 
                 <div className='grid grid-cols-2  block md:hidden  gap-x-2'>
                     <div className='rounded-xl  text-center flex flex-col justify-center items-center text-sm font-semibold h-[50px] bg-[#F2F4FF] px-4 text-center '>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 11 7" fill="none">
-                             <path d="M1.33447 6L5.33447 2L9.33447 6" stroke="#4661E6" stroke-width="2"/>
+                         <svg xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 11 7" fill="none">
+                           <path d="M1.33447 6L5.33447 2L9.33447 6" stroke="#4661E6" stroke-width="2"/>
                          </svg>
                        112
                     </div>

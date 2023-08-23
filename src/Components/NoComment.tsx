@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react'
 import NoCommentIcon from "../assets/Group 16.png"
+import AddFeedBackButton from './AddFeedBackButton'
 
 interface Props {
     
@@ -12,9 +13,12 @@ function NoComment({}: Props): ReactElement {
                  <img className='w-[160px] h-50' src = {NoCommentIcon }/>
                  <p>There is no feedback yet.</p>
                   <p className='text-[#647196] text-[15px]' >  Got a suggestion? Found a bug that needs to be squashed?<br/> We love hearing about new ideas to improve our app.</p>
-                  <button className='bg-[#AD1FEA] text-white p-3 font-semibold rounded-lg md:mt-[80px]'>
+                  {/* <button className='bg-[#AD1FEA] text-white p-3 font-semibold rounded-lg lg:mt-[80px]'>
                         Add Feedback  +
-                  </button>
+                  </button> */}
+                  <AddFeedBackButton
+                    marginTop='mt-[80px]'
+                  />
             </div>
         </div>
     )
