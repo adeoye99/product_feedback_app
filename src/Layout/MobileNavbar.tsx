@@ -6,7 +6,7 @@ interface Props {
 
 function MobileNavbar({}: Props): ReactElement {
     return (
-        <div>
+        <div className='md:hidden'>
             
         </div>
     )

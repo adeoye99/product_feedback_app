@@ -17,7 +17,7 @@ function RoadMap({}: Props): ReactElement {
                 <div className='flex flex-col items-center  text-white  font-bold'>
                     <div className='flex items-center  gap-2 text-white  font-bold'>
                          <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
-                                 <path d="M4.33447 9L0.334473 5L4.33447 1" stroke="#CDD2EE" stroke-width="2"/>
+                                 <path d="M4.33447 9L0.334473 5L4.33447 1" stroke="#CDD2EE" strokeWidth="2"/>
                           </svg>
                       Go back
 
@@ -50,8 +50,6 @@ function RoadMap({}: Props): ReactElement {
                                         amountOfComment = {item?.noOfComment}
                                         upVotes = {item?.upvotes}
                                         status = {item?.status}
-                                        
-                                        
                                         />
                                     )
                                   })

@@ -1,10 +1,10 @@
 import React, { ReactElement } from 'react'
 import oval from "../assets/Oval.svg"
 import Tab from "../Components/tab"
-import HeaderIcon from "../assets/header-icon.svg"
+
 import Feedback from '../Components/Feedback'
 import NoComment from '../Components/NoComment'
-import { Link } from 'react-router-dom'
+
 import AddFeedBackButton from '../Components/AddFeedBackButton'
 interface Props {
     
@@ -17,7 +17,7 @@ function Home({}: Props): ReactElement {
         <div className='bg-[#F7F8FD]  pt-8'>
            
             <div className=' grid  lg:grid-cols-4 h-screen md:w-[80%] mx-auto  '>
-                <div className='hidden flex-row gap-3 md:block md:flex lg:flex-col'>
+                <div className='hidden flex-row w-[100%] gap-3 md:block md:flex lg:flex-col'>
                     
                        <div className='h-[200px] w-[100%] relative rounded-xl bg-center bg-cover pt-[10%] lg:pt-[30%] pl-[1%] lg:pl-[10%]' style = {{ backgroundImage : `url(${oval})`}}>
                          <div className=' text-white'>
@@ -107,7 +107,7 @@ function Home({}: Props): ReactElement {
 
 
                 </div>
-                <div className='col-span-3 px-4 lg:mt-[20px]'>
+                <div className='col-span-3 px-4 '>
                     <header className='bg-[#373F68] h-[80px] flex items-center rounded-lg gap-x-6 text-white px-5 relative'>
                     <svg className='hidden md:block' xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
                          <g clip-path="url(#clip0_12_3)">

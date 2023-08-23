@@ -9,7 +9,7 @@ interface Props {
 function NewFeedback({}: Props): ReactElement {
   const navigate = useNavigate()
     return (
-        <div className='pt-6 bg-[#F7F8FD] '>
+        <div className='pt-6 bg-[#F7F8FD] h-screen '>
             <div className='md:w-[35%] mx-auto'>
                <Gobackbutton
                  name = "Go Back"
@@ -54,18 +54,14 @@ function NewFeedback({}: Props): ReactElement {
                              className=' w-[100%] bg-[#F7F8FD] rounded-lg h-[98px] mt-2 px-6 '
                            />   
                         </div>
-                        <div className='grid md:grid-cols-2 mt-4'>
+                        <div className='grid grid-cols-1 lg:grid-cols-3 mt-4'>
                             <div className=''>
 
 
                             </div>
                             
-                            <div className='text-right gap-2'>
-                             
-
-
-                               
-                                <button className='bg-[#3A4374] text-white p-3 font-semibold w-[40%] rounded-lg text-[14px] mr-4 '>
+                            <div className='col-span-2 grid grid-cols-2 gap-2'>
+                                <button className='bg-[#3A4374] text-white p-3 font-semibold w-[100%]  rounded-lg text-[14px] mr-4 '>
                                      Cancel
                                    </button>
                                  <button className='bg-[#AD1FEA] text-white p-3 font-semibold rounded-lg text-[14px]'>

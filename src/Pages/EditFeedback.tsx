@@ -34,7 +34,7 @@ function EditFeedback({}: Props): ReactElement {
                           <p className='text-[#3A4374] text-[14px] font-bold '>Feedback Title</p>
                            <p className='text-[#647196] text-[14px]  '>Add a short, descriptive headline</p>
                            <input
-                             className=' w-[100%] bg-[#F7F8FD] rounded-lg h-[48px] mt-2 '
+                             className=' w-[100%] bg-[#F7F8FD] rounded-lg h-[48px] mt-2 p-4 '
                             />
                         </div>
                         <div className='flex flex-col mt-10'>
@@ -64,24 +64,20 @@ function EditFeedback({}: Props): ReactElement {
 
                          
                         </div>
-                        <div className='grid grid-cols-1 md:grid-cols-2 mt-4'>
+                        <div className='grid grid-cols-1 lg:grid-cols-3 mt-4'>
                             <div className='text-left'>
-                                  <button className='bg-[#D73737] text-white p-3 font-semibold w-[40%] rounded-lg text-[14px] mr-4 '>
+                                  <button className='bg-[#D73737] text-white p-3 font-semibold w-[80%] rounded-lg text-[14px] mr-4 '>
                                      Delete
                                    </button>
 
 
                             </div>
                             
-                            <div className='text-right gap-2'>
-                             
-
-
-                               
-                                <button className='bg-[#3A4374] text-white p-3 font-semibold w-[40%] rounded-lg text-[14px] mr-4 '>
+                            <div className='text-right col-span-2 gap-2 grid grid-cols-2'>
+                                <button className='bg-[#3A4374] text-white p-3 font-semibold w-[100%] lg:w-[100%] rounded-lg text-[14px] mr-4 '>
                                      Cancel
                                    </button>
-                                 <button className='bg-[#AD1FEA] text-white p-3 font-semibold rounded-lg text-[14px]'>
+                                 <button className='bg-[#AD1FEA] text-white p-3 font-semibold lg:w-[100%] rounded-lg text-[14px]'>
                                      Add Feedback
                                    </button>
                                  
