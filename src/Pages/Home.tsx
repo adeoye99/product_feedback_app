@@ -5,9 +5,11 @@ import Tab from "../Components/tab"
 import Feedback from '../Components/Feedback'
 import NoComment from '../Components/NoComment'
 
+
 import AddFeedBackButton from '../Components/AddFeedBackButton'
 import MobileNavbar from '../Layout/MobileNavbar'
 import SideBar from '../Layout/SideBar'
+import DropdownFilter from '../Components/DropdownFilter'
 interface Props {
     
 }
@@ -17,12 +19,18 @@ const table = []
 function Home({}: Props): ReactElement {
 
   const [isOpen, setIsOpen] = useState(false);
+  const [filterOpen , setFilterOpen] =  useState(false)
   // const sidebarRef = useRef<HTMLDivElement | null>(null);
-
+    const filterRef = useRef<HTMLDivElement| null>(null)
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
     console.log("hfsgbfj")
   };
+
+  const filterhandle = () => {
+    setFilterOpen(!filterOpen)
+
+  }
   // useEffect(() => {
   //   const handleClickOutside = (event: MouseEvent) => {
   //     if (sidebarRef.current && !(sidebarRef.current as any).contains(event.target)) {
@@ -36,10 +44,24 @@ function Home({}: Props): ReactElement {
   //     document.removeEventListener('click', handleClickOutside);
   //   };
   // }, [sidebarRef]);
+  useEffect(() => {
+    const handleClickOutside = (event:any) => {
+      if (filterRef ?.current && !filterRef?.current?.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+     document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+     document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+
     return (
         <div className='bg-[#F7F8FD] pt-[70px] md:pt-8'>
            <MobileNavbar
             onClick = {toggleSidebar}
+            isOpen = {isOpen}
 
              
             /> 
@@ -48,7 +70,10 @@ function Home({}: Props): ReactElement {
             //  sideref = {sidebarRef}
               
             />
-           
+           <DropdownFilter
+             filterRef={filterRef}
+              
+           />
             <div className='grid lg:grid-cols-4 h-screen md:w-[80%] mx-auto  '>
                 <div className='hidden flex-row w-[100%] gap-3 md:block md:flex lg:flex-col'>
                     
