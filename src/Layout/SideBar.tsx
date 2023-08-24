@@ -10,9 +10,9 @@ interface Props {
 }
 
 function SideBar({ isOpen  , sideref }: Props): ReactElement {
-  console.log(isOpen)
+  
     return (
-        <div ref = {sideref}  className={`transition-transform transform ${isOpen ? "translate-x-0" : "translate-x-full"} z-30 gap-y-2 w-[70%] right-0 fixed top-0 h-full bg-[#F7F8FD] block md:hidden`}> 
+        <div ref = {sideref}  className={`transition-transform transform ${isOpen ? "translate-x-0" : "translate-x-full"} z-30 gap-y-2 w-[80%] right-0 fixed top-0 h-full bg-[#F7F8FD] block md:hidden`}> 
               <div className=' flex-row w-[100%] gap-y-8 md:flex lg:flex-col'>
                     
                     <div className='bg-white mt-[100px] lg:mt-6 h-[200px] w-[80%] mx-auto relative rounded-sm py-6 px-3'>

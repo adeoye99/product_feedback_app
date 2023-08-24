@@ -13,41 +13,43 @@ import DropdownFilter from '../Components/DropdownFilter'
 interface Props {
     
 }
-const table = []
+const table = [
+  {the : "gdhg"}
+]
   
 
 function Home({}: Props): ReactElement {
 
   const [isOpen, setIsOpen] = useState(false);
   const [filterOpen , setFilterOpen] =  useState(false)
-  // const sidebarRef = useRef<HTMLDivElement | null>(null);
+  const sidebarRef = useRef<HTMLDivElement | null>(null);
     const filterRef = useRef<HTMLDivElement| null>(null)
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
-    console.log("hfsgbfj")
+   
   };
 
   const filterhandle = () => {
     setFilterOpen(!filterOpen)
 
   }
-  // useEffect(() => {
-  //   const handleClickOutside = (event: MouseEvent) => {
-  //     if (sidebarRef.current && !(sidebarRef.current as any).contains(event.target)) {
-  //       setIsOpen(false);
-  //     }
-  //   };
+  useEffect(() => {
+    const handleClickOutside = (event:any) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
 
-  //   document.addEventListener('click', handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
 
-  //   return () => {
-  //     document.removeEventListener('click', handleClickOutside);
-  //   };
-  // }, [sidebarRef]);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
   useEffect(() => {
     const handleClickOutside = (event:any) => {
       if (filterRef ?.current && !filterRef?.current?.contains(event.target)) {
-        setIsOpen(false);
+        setFilterOpen(false);
       }
     };
      document.addEventListener('mousedown', handleClickOutside);
@@ -67,13 +69,11 @@ function Home({}: Props): ReactElement {
             /> 
             <SideBar
              isOpen = {isOpen}
-            //  sideref = {sidebarRef}
+             sideref = {sidebarRef}
               
             />
-           <DropdownFilter
-             filterRef={filterRef}
-              
-           />
+         
+           
             <div className='grid lg:grid-cols-4 h-screen md:w-[80%] mx-auto  '>
                 <div className='hidden flex-row w-[100%] gap-3 md:block md:flex lg:flex-col'>
                     
@@ -84,7 +84,7 @@ function Home({}: Props): ReactElement {
                           </div>
                         
                        </div>
-                       <div className='bg-white lg:mt-6 h-[180px] w-[100%] relative rounded-sm py-6 px-3'>
+                       <div className='bg-white lg:mt-6 h-auto w-[100%] relative rounded-xl py-8 px-3'>
                          <div className='flex flex-col gap-y-4 '>
                             <div className='flex gap-4'>
                               <Tab
@@ -116,12 +116,12 @@ function Home({}: Props): ReactElement {
                           </div>
                         
                        </div>
-                       <div className='bg-white w-[100%] lg:mt-6 h-[180px] relative rounded-xl py-6 px-3'>
+                       <div className='bg-white w-[100%] lg:mt-6 h-auto relative rounded-xl py-8 px-3'>
                          <div className='w-[80%] mx-auto grid grid-cols-1 gap-y-4'>
                            
                            <div className='grid grid-cols-2'>
                               <p className='text-black font-semibold'>RoadMap</p> 
-                              <p className='text-right text-[#4661E6] underline hover:cursor'>View</p>
+                              <p className='text-right text-[#4661E6] pb-2 underline hover:cursor-pointer'>View</p>
                            </div>
                            <div className='grid grid-cols-2'>
                             <div className='flex items-center gap-2 text-[#647196] text-sm'>
@@ -182,12 +182,26 @@ function Home({}: Props): ReactElement {
                             6 Suggestions
                           </p>
                       </div>
-                      <div className='flex items-center gap-3'>
+                      <div onClick = {filterhandle} className='flex items-center gap-3'>
                         Sort By: Most Upvotes 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="9" height="7" viewBox="0 0 9 7" fill="none">
-                          <path d="M1 1L5 5L9 1" stroke="white" stroke-width="2"/>
-                        </svg>
+                        {
+                          filterOpen ? 
+                          <svg xmlns="http://www.w3.org/2000/svg" width="9" height="7" viewBox="0 0 9 7" fill="none">
+                                   <path d="M1 6L5 2L9 6" stroke="white" stroke-width="2"/>
+                           </svg>:
+                              <svg xmlns="http://www.w3.org/2000/svg" width="9" height="7" viewBox="0 0 9 7" fill="none">
+                              <path d="M1 1L5 5L9 1" stroke="white" stroke-width="2"/>
+                            </svg>
 
+                        }
+                     
+                            {
+                                filterOpen &&
+                                  <DropdownFilter
+                                    filterRef={filterRef}
+              
+                                    />
+                             }
                       </div>
                      <div className='absolute right-2'>
                         {/* <button className='bg-[#AD1FEA] p-3 font-semibold rounded-lg '>
@@ -206,9 +220,7 @@ function Home({}: Props): ReactElement {
                         <NoComment/>
                        </>: 
                        <>
-                          <Feedback
-                          
-                          />
+                          <Feedback/>
                           <Feedback/>
                           <Feedback/>
                           <Feedback/>

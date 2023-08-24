@@ -33,7 +33,7 @@ function Feedback({}: Props): ReactElement {
                      2
                    </div>
                 </div> 
-                <div className='grid grid-cols-2  block md:hidden  gap-x-2 relative'>
+                <div className='grid grid-cols-2 w-[310px]  block md:hidden  gap-x-2 relative'>
                     <div className='rounded-xl  text-center flex flex-col justify-center items-center text-sm font-semibold h-[50px] bg-[#F2F4FF] px-4 text-center '>
                          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="7" viewBox="0 0 11 7" fill="none">
                            <path d="M1.33447 6L5.33447 2L9.33447 6" stroke="#4661E6" stroke-width="2"/>

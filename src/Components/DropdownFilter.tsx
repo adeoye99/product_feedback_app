@@ -5,14 +5,14 @@ interface Props {
     
 }
 
-function DropdownFilter({  filterRef }: Props): ReactElement {
+function DropdownFilter({ filterRef }: Props): ReactElement {
     return (
-        <div ref = {filterRef} >
-            <ul className='border h-[140px]'>
-                <li>Most Vote</li>
-                <li>Least Votes</li>
-                <li>Most Comments</li>
-                <li>least Comments</li>
+        <div ref = {filterRef}  className=' h-auto rounded-lg md:w-[30%] text-black absolute top-[80px] z-40 bg-white shadow-md '>
+            <ul className=''>
+                <li className='border-b-2 p-4 text-sm text-[#647196] hover:text-[#AD1FEA] hover:cursor-pointer'>Least Upvotes</li>
+                <li className='border-b-2 p-4 text-sm text-[#647196] hover:text-[#AD1FEA] hover:cursor-pointer'>Least Upvotes</li>
+                <li className='border-b-2 p-4 text-sm text-[#647196] hover:text-[#AD1FEA] hover:cursor-pointer'>Most Comments</li>
+                <li className=' p-4 text-sm text-[#647196] hover:text-[#AD1FEA] hover:cursor-pointer'>Least Comments</li>
             </ul>
         </div>
     )
