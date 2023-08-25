@@ -8,7 +8,7 @@ interface Props {
 
 function EditFeedback({}: Props): ReactElement {
     return (
-        <div className='pt-6 bg-[#F7F8FD]'>
+        <div className='pt-6 pb-6 bg-[#F7F8FD]'>
             <div className='md:w-[35%] mx-auto'>
                 <Gobackbutton
                   name = "Go Back"
@@ -47,10 +47,10 @@ function EditFeedback({}: Props): ReactElement {
                             </select>
                         </div>
                         <div className='flex flex-col mt-10'>
-                          <p className='text-[#3A4374] text-[14px] font-bold '>Update Status</p>
-                           <p className='text-[#647196] text-[14px]  '>Change feedback state</p>
+                          <p className='text-[#3A4374] text-[14px] font-bold'>Update Status</p>
+                           <p className='text-[#647196] text-[14px]'>Change feedback state</p>
                            <select
-                             className=' w-[100%] bg-[#F7F8FD] rounded-lg h-[48px] mt-2 px-6 '
+                             className=' w-[100%] bg-[#F7F8FD] rounded-lg h-[48px] mt-2'
                             >
 
                             </select>
@@ -59,7 +59,7 @@ function EditFeedback({}: Props): ReactElement {
                           <p className='text-[#3A4374] text-[14px] font-bold '>Feedback Detail</p>
                            <p className='text-[#647196] text-[14px]  '>Include any specific comments on what should be improved, added, etc.</p>
                            <textarea
-                             className=' w-[100%] bg-[#F7F8FD] rounded-lg h-[98px] mt-2 px-6 '
+                             className=' w-[100%] bg-[#F7F8FD] rounded-lg h-[98px] mt-2 px-4 py-2'
                            / >
 
                          

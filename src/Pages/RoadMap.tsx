@@ -1,10 +1,13 @@
 import React, { ReactElement } from 'react'
 import Roadmapcomp from '../Components/Roadmapcomp'
-import jsonData from "../data.json"
+
 import planned from '../Constants/RoadMapdata'
 import Live from '../Constants/Live'
 import inProgress from '../Constants/InProgress'
 import { useNavigate } from 'react-router-dom'
+
+
+
 
 interface Props {
     
@@ -13,7 +16,7 @@ interface Props {
 function RoadMap({}: Props): ReactElement {
 
     const navigate = useNavigate()
-    console.log(jsonData)
+    
     return (
         <div className='pt-6 bg-[#F7F8FD]'>
               <header className='bg-[#373F68] w-[80%] mx-auto h-[80px] flex items-center rounded-lg gap-x-6 text-white px-5 relative'>

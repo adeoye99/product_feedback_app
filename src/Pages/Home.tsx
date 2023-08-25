@@ -10,20 +10,26 @@ import AddFeedBackButton from '../Components/AddFeedBackButton'
 import MobileNavbar from '../Layout/MobileNavbar'
 import SideBar from '../Layout/SideBar'
 import DropdownFilter from '../Components/DropdownFilter'
+import { useNavigate } from 'react-router-dom'
+import jsonData from "../data.json"
 interface Props {
     
 }
 const table = [
-  {the : "gdhg"}
+  {
+    the : "gdhg"
+  }
 ]
   
 
 function Home({}: Props): ReactElement {
+  console.log(jsonData)
 
   const [isOpen, setIsOpen] = useState(false);
   const [filterOpen , setFilterOpen] =  useState(false)
   const sidebarRef = useRef<HTMLDivElement | null>(null);
     const filterRef = useRef<HTMLDivElement| null>(null)
+    const navigate = useNavigate()
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
    
@@ -48,11 +54,13 @@ function Home({}: Props): ReactElement {
   }, []);
   useEffect(() => {
     const handleClickOutside = (event:any) => {
-      if (filterRef ?.current && !filterRef?.current?.contains(event.target)) {
+      if (filterRef?.current && !filterRef?.current?.contains(event.target)) {
         setFilterOpen(false);
       }
     };
+
      document.addEventListener('mousedown', handleClickOutside);
+
     return () => {
      document.removeEventListener('mousedown', handleClickOutside);
     };
@@ -77,7 +85,7 @@ function Home({}: Props): ReactElement {
             <div className='grid lg:grid-cols-4 h-screen md:w-[80%] mx-auto  '>
                 <div className='hidden flex-row w-[100%] gap-3 md:block md:flex lg:flex-col'>
                     
-                       <div className='h-[180px] w-[100%] relative rounded-xl bg-center bg-cover pt-[10%] lg:pt-[30%] pl-[1%] lg:pl-[10%]' style = {{ backgroundImage : `url(${oval})`}}>
+                       <div className='lg:h-[180px] w-[100%] relative rounded-xl bg-center bg-cover pt-[10%] lg:pt-[30%] pl-[1%] lg:pl-[10%]' style = {{ backgroundImage : `url(${oval})`}}>
                          <div className=' text-white'>
                             <p className='text-xl'>Frontend Mentor</p>
                             <p className='text-sm'>Feedback Board</p>
@@ -121,7 +129,7 @@ function Home({}: Props): ReactElement {
                            
                            <div className='grid grid-cols-2'>
                               <p className='text-black font-semibold'>RoadMap</p> 
-                              <p className='text-right text-[#4661E6] pb-2 underline hover:cursor-pointer'>View</p>
+                              <p onClick = {() =>navigate("/roadmap")} className='text-right text-[#4661E6] pb-2 underline hover:cursor-pointer hover:font-bold'>View</p>
                            </div>
                            <div className='grid grid-cols-2'>
                             <div className='flex items-center gap-2 text-[#647196] text-sm'>
@@ -144,7 +152,7 @@ function Home({}: Props): ReactElement {
                             </div>
                             
                              <p className='text-right font-semibold'>
-                                  3
+                                 3
                              </p>
                            </div>
                            <div className='grid grid-cols-2'>
@@ -152,10 +160,10 @@ function Home({}: Props): ReactElement {
                             <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
                                <circle cx="4" cy="4" r="4" fill="#62BCFA"/>
                              </svg>
-                             Live
+                               Live
                             </div>
                              <p className='text-right font-semibold'>
-                                  1
+                                1
                              </p>
                            </div>
                             
@@ -189,7 +197,7 @@ function Home({}: Props): ReactElement {
                           <svg xmlns="http://www.w3.org/2000/svg" width="9" height="7" viewBox="0 0 9 7" fill="none">
                                    <path d="M1 6L5 2L9 6" stroke="white" stroke-width="2"/>
                            </svg>:
-                              <svg xmlns="http://www.w3.org/2000/svg" width="9" height="7" viewBox="0 0 9 7" fill="none">
+                              <svg xmlns = "http://www.w3.org/2000/svg" width="9" height="7" viewBox="0 0 9 7" fill="none">
                               <path d="M1 1L5 5L9 1" stroke="white" stroke-width="2"/>
                             </svg>
 
@@ -220,6 +228,12 @@ function Home({}: Props): ReactElement {
                         <NoComment/>
                        </>: 
                        <>
+                          <Feedback/>
+                          <Feedback/>
+                          <Feedback/>
+                          <Feedback/>
+                          <Feedback/>
+                          <Feedback/>
                           <Feedback/>
                           <Feedback/>
                           <Feedback/>

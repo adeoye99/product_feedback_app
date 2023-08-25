@@ -35,15 +35,21 @@ function NewFeedback({}: Props): ReactElement {
                           <p className='text-[#3A4374] text-[14px] font-bold '>Feedback Title</p>
                            <p className='text-[#647196] text-[14px]  '>Add a short, descriptive headline</p>
                            <input
-                             className=' w-[100%] bg-[#F7F8FD] rounded-lg h-[48px] mt-2 '
+                             className=' w-[100%] bg-[#F7F8FD] px-2 rounded-lg h-[48px] mt-2 focus:border-none '
                             />
                         </div>
                         <div className='flex flex-col mt-10'>
                           <p className='text-[#3A4374] text-[14px] font-bold '>Category</p>
                            <p className='text-[#647196] text-[14px]  '>Choose a category for your feedback</p>
                            <select
-                             className=' w-[100%] bg-[#F7F8FD] rounded-lg h-[48px] mt-2 px-6 '
+                             className=' w-[100%] bg-[#F7F8FD] rounded-lg h-[48px] mt-2 px-4 '
                             >
+                           
+                                <option value="Nice">Nice</option>
+                                <option value="Winter">Winter</option>
+                                <option value="Nice">Nice</option>
+                                <option value="Winter">Winter</option>
+                            
 
                             </select>
                         </div>
@@ -51,7 +57,7 @@ function NewFeedback({}: Props): ReactElement {
                           <p className='text-[#3A4374] text-[14px] font-bold '>Feedback Detail</p>
                            <p className='text-[#647196] text-[14px]  '>Include any specific comments on what should be improved, added, etc.</p>
                            <textarea
-                             className=' w-[100%] bg-[#F7F8FD] rounded-lg h-[98px] mt-2 px-6 '
+                             className=' w-[100%] bg-[#F7F8FD] rounded-lg h-[98px] mt-2 px-4 py-2'
                            />   
                         </div>
                         <div className='grid grid-cols-1 lg:grid-cols-3 mt-4'>
