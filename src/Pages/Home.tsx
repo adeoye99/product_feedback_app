@@ -1,11 +1,8 @@
 import React, { ReactElement , useState , useEffect , useRef } from 'react'
 import oval from "../assets/Oval.svg"
 import Tab from "../Components/tab"
-
 import Feedback from '../Components/Feedback'
 import NoComment from '../Components/NoComment'
-
-
 import AddFeedBackButton from '../Components/AddFeedBackButton'
 import MobileNavbar from '../Layout/MobileNavbar'
 import SideBar from '../Layout/SideBar'
@@ -133,10 +130,10 @@ function Home({}: Props): ReactElement {
                            </div>
                            <div className='grid grid-cols-2'>
                             <div className='flex items-center gap-2 text-[#647196] text-sm'>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
-                               <circle cx="4" cy="4" r="4" fill="#F49F85"/>
-                             </svg>
-                             Planned
+                                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                                  <circle cx="4" cy="4" r="4" fill="#F49F85"/>
+                                </svg>
+                                 Planned
                             </div>
                             
                              <p className='text-right font-semibold'>
